@@ -2,13 +2,10 @@
   "id": "bCYnP82P",
   "projectName": "Dano Finance",
   "link": "https://danogo.io",
-  "twitter": "https://x.com/DanogoFinance",
   "category": "DEFI",
-  "subCategory": "LENDING_BORROWING",
   "description": {
-    "short": "Dano Finance is a Cardano-based DeFi platform focused on lending and borrowing"
+    "short": "Dano Finance is a DeFi platform for lending, borrowing, and trading — all in one"
   },
-  "features": ["LENDING_BORROWING", "ORACLE", "SWAP", "CONCENTRATED_POOLS", "DEX_AGGREGATOR", "LIMIT_ORDERS"],
   "releases": [
     {
       "releaseNumber": 1,
@@ -26,6 +23,28 @@
       "scripts": [
         {
           "id": "0BKSKh1C",
+          "version": 1
+        }
+      ]
+    },
+    {
+      "releaseNumber": 2,
+      "releaseName": "Bond Validator",
+      "scripts": [
+        {
+          "id": "Kh1C0BKS",
+          "version": 1
+        },
+        {
+          "id": "Mg2A5CWE",
+          "version": 1
+        },
+        {
+          "id": "2CWGFa2B",
+          "version": 1
+        },
+        {
+          "id": "5AWGAnwB",
           "version": 1
         }
       ]
@@ -89,6 +108,39 @@
           "version": 1
         }
       ]
+    },
+    {
+      "releaseNumber": 3,
+      "releaseName": "Btc Grow",
+      "scripts": [
+        {
+          "id": "DnBB01",
+          "version": 1
+        },
+        {
+          "id": "DnBB02",
+          "version": 1
+        },
+        {
+          "id": "DnBM01",
+          "version": 1
+        }
+      ]
+    },
+
+    {
+      "releaseNumber": 2,
+      "releaseName": "Fixed Lending Contract",
+      "scripts": [
+        {
+          "id": "DnFL09",
+          "version": 1
+        },
+        {
+          "id": "DnFL10",
+          "version": 1
+        }
+      ]
     }
   ],
   "audits": [
@@ -115,12 +167,18 @@
       "auditor": "No Witness Labs",
       "auditLink": "https://151939035-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FXipTeu714Ty8zEKpJIdy%2Fuploads%2FLNVh9hluR8rs3AtUIkva%2Fdanogo-flexible-rate-lending-audit-report.pdf?alt=media",
       "auditType": "MANUAL"
+    },
+    {
+      "auditId": "aBG1",
+      "auditor": "No Witness Labs",
+      "auditLink": "https://github.com/danogo-finance/resources/blob/main/audits/btc-grow-audit-report.pdf",
+      "auditType": "MANUAL"
     }
   ],
   "scripts": [
     {
       "id": "Q3AwrQe3",
-      "name": "Swap Validator",
+      "name": "Bond Swap Validator",
       "purpose": "SPEND",
       "type": "PLUTUS",
       "scriptHash": "537071da0b93b2c126ffeb754e9147f816d6da1ef13e72aba4d22523",
@@ -129,11 +187,43 @@
     },
     {
       "id": "0BKSKh1C",
-      "name": "Swap Validator",
+      "name": "Bond Swap Validator",
       "purpose": "SPEND",
       "type": "PLUTUS",
       "scriptHash": "c72a1aa3e4568cbe681734582d660383b2cabf3f27289643021e89c6",
       "fullScriptHash": "71c72a1aa3e4568cbe681734582d660383b2cabf3f27289643021e89c6",
+      "plutusVersion": 2
+    },
+    {
+      "id": "Kh1C0BKS",
+      "name": "OptimBond Validator",
+      "purpose": "SPEND",
+      "type": "PLUTUS",
+      "scriptHash": "1d2390bab44f6267c0145456dc2f5f8ea2586fcb0aadac5525d9a406",
+      "plutusVersion": 2
+    },
+    {
+      "id": "Mg2A5CWE",
+      "name": "Bond Validator",
+      "purpose": "SPEND",
+      "type": "PLUTUS",
+      "scriptHash": "6c7831efc56f019518ff9a2bad54848c7ee689b99dbca042b251a096",
+      "plutusVersion": 2
+    },
+    {
+      "id": "2CWGFa2B",
+      "name": "Borrow Validator",
+      "purpose": "SPEND",
+      "type": "PLUTUS",
+      "scriptHash": "e99bdbaa35c8adb221ce6feafcab06cd33575f7518ba5f970c7eb702",
+      "plutusVersion": 2
+    },
+    {
+      "id": "5AWGAnwB",
+      "name": "Borrow Validator",
+      "purpose": "SPEND",
+      "type": "PLUTUS",
+      "scriptHash": "b49635995d909a262fe030bb92886257a24e8b96eab5fa03ef9ff517",
       "plutusVersion": 2
     },
     {
@@ -263,6 +353,71 @@
           "version": 1,
           "plutusVersion": 3,
           "scriptHash": "9759bfd89ffa91652064f3a2ef66dcc5c52ca85b55e938ad29198f72"
+        }
+      ]
+    },
+    {
+      "id": "DnBB01",
+      "name": "Btc grow bridge asset",
+      "purpose": "SPEND/WITHDRAW",
+      "type": "PLUTUS",
+      "versions": [
+        {
+          "version": 1,
+          "plutusVersion": 3,
+          "scriptHash": "534de3c0c26a8db1fdfc34b4efa5039879c4b4b09e6e3ae92881f22f"
+        }
+      ]
+    },
+    {
+      "id": "DnBB02",
+      "name": "Btc grow babel fee",
+      "purpose": "SPEND/WITHDRAW",
+      "type": "PLUTUS",
+      "versions": [
+        {
+          "version": 1,
+          "plutusVersion": 3,
+          "scriptHash": "22e212c5278964fba8f90cb8240c1c2926fe4a24758eabc3258b8c9c"
+        }
+      ]
+    },
+    {
+      "id": "DnBM01",
+      "name": "Btc grow metadata validation",
+      "purpose": "WITHDRAW",
+      "type": "PLUTUS",
+      "versions": [
+        {
+          "version": 1,
+          "plutusVersion": 3,
+          "scriptHash": "511d3a02d3a7850dec3eb97caa7e0d491138284af9303df5d0ddfc2b"
+        }
+      ]
+    },
+    {
+      "id": "DnFL09",
+      "name": "Fixed Pool Contract",
+      "purpose": "MINTING/SPEND/WITHDRAW",
+      "type": "PLUTUS",
+      "versions": [
+        {
+          "version": 1,
+          "plutusVersion": 3,
+          "scriptHash": "8786a2761c8a5b43af6b936fd852080820a9051ae9e707a7f1d6492a"
+        }
+      ]
+    },
+    {
+      "id": "DnFL10",
+      "name": "Fixed Loan Contract",
+      "purpose": "MINTING/SPEND/WITHDRAW",
+      "type": "PLUTUS",
+      "versions": [
+        {
+          "version": 1,
+          "plutusVersion": 3,
+          "scriptHash": "a2a39081978098ade606768c8b688d1ecc57910e8708511b48da82d2"
         }
       ]
     }
