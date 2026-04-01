@@ -3,9 +3,7 @@
   "projectName": "Dano Finance",
   "link": "https://danogo.io",
   "category": "DEFI",
-  "description": {
-    "short": "Dano Finance is a DeFi platform for lending, borrowing, and trading — all in one"
-  },
+  "description": "Dano Finance is a DeFi platform for lending, borrowing, and trading — all in one",
   "releases": [
     {
       "releaseNumber": 1,
